@@ -1,0 +1,29 @@
+# src/main/resources/application.yml
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          auth0:
+            client-id: sYgACObFKCl8C8JMyIaBo54dzX9u8HLF
+            client-secret: aGYTHIXyyVjL7yGzb2L2f9QNW4NvbfFHRcvfkDkIDdTuR0846nsXY_DNjpsmXkHW
+#            redirectUri: http://localhost:3000/api/redirect
+            scope:
+              - openid
+              - profile
+              - email
+          myapp:
+            client-id: FCpjYEK980w75mXi5PsEGkJEyTugpEIk
+            client-secret: 8-fqEwXOOMpc_aoV1yLB1uS3eRcrKvzYGOd8QKfHuz9aOW5KRUsT-12Fg3pmC7SA
+            redirectUri: http://localhost:3000/api/redirectmyapp
+            scope:
+              - openid
+              - profile
+              - email
+        provider:
+          auth0:
+            # trailing slash is important!
+            issuer-uri: https://aghilsdevbox.us.auth0.com/
+          myapp:
+            # trailing slash is important!
+            issuer-uri: https://aghilsdevbox.us.auth0.com/
